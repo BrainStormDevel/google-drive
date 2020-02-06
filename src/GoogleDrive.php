@@ -1,6 +1,6 @@
 <?php
 
-namespace w3lifer\google;
+namespace BrainStorm\google;
 
 use Exception;
 use Google_Client;
@@ -42,9 +42,9 @@ class GoogleDrive
         $this->client->setAccessType('offline');
 
         $this->client->setAuthConfig($this->pathToCredentials);
-        $this->client->addScope('https://www.googleapis.com/auth/drive');
+        $this->client->addScope(Google_Service_Drive::DRIVE);
 
-        $this->checkAccessToken();
+        echo $this->checkAccessToken();
 
         $this->service = new Google_Service_Drive($this->client);
     }
@@ -56,6 +56,7 @@ class GoogleDrive
                 file_get_contents($this->pathToToken),
                 true
             );
+			return $accessToken;
             $this->client->setAccessToken($accessToken);
         }
         if ($this->client->isAccessTokenExpired()) {

@@ -6,7 +6,7 @@
 ## Installation
 
 ``` sh
-composer require w3lifer/google-drive
+composer require BrainStorm/google-drive
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ composer require w3lifer/google-drive
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use w3lifer\google\GoogleDrive;
+use BrainStorm\google\GoogleDrive;
 
 $googleDrive = new GoogleDrive([
     'pathToCredentials' => __DIR__ . '/credentials.json', // Required

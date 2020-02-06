@@ -1,5 +1,5 @@
 {
-  "name": "w3lifer/google-drive",
+  "name": "BrainStorm/google-drive",
   "keywords": [
     "google",
     "drive"
@@ -11,13 +11,14 @@
   },
   "authors": [
     {
-      "name": "Roman Grinyov",
-      "email": "w3lifer@gmail.com"
+		"name": "BrainStorm",
+		"email": "pendley@libero.it",
+		"homepage": "https://github.com/BrainStormDevel"
     }
   ],
   "autoload": {
     "psr-4": {
-      "w3lifer\\google\\": ""
+      "BrainStorm\\google\\": "src"
     }
   }
 }
